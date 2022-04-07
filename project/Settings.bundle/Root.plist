@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Application</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Version</string>
+			<key>Key</key>
+			<string>app_version</string>
+			<key>DefaultValue</key>
+			<string>0.0.0</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Global settings</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Connection timeout</string>
+			<key>Key</key>
+			<string>app_connection_timeout</string>
+			<key>DefaultValue</key>
+			<integer>300</integer>
+			<key>Titles</key>
+			<array>
+				<string>30 minutes</string>
+				<string>5 minutes</string>
+				<string>2 minutes</string>
+				<string>1 minute</string>
+				<string>30 seconds</string>
+				<string>15 seconds</string>
+				<string>10 seconds</string>
+				<string>5 seconds</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>1800</integer>
+				<integer>300</integer>
+				<integer>120</integer>
+				<integer>60</integer>
+				<integer>30</integer>
+				<integer>15</integer>
+				<integer>10</integer>
+				<integer>5</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Maximum temperature</string>
+			<key>Key</key>
+			<string>app_maximum_thermal_state</string>
+			<key>DefaultValue</key>
+			<string>Nominal</string>
+			<key>Titles</key>
+			<array>
+				<string>Nominal</string>
+				<string>Fair</string>
+				<string>Serious</string>
+				<string>Critical</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>Nominal</string>
+				<string>Fair</string>
+				<string>Serious</string>
+				<string>Critical</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Minimum battery percentage</string>
+			<key>Key</key>
+			<string>app_minimum_battery_percentage</string>
+			<key>DefaultValue</key>
+			<integer>40</integer>
+			<key>Titles</key>
+			<array>
+				<string>70%</string>
+				<string>60%</string>
+				<string>50%</string>
+				<string>40%</string>
+				<string>25%</string>
+				<string>5%</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<integer>70</integer>
+				<integer>60</integer>
+				<integer>50</integer>
+				<integer>40</integer>
+				<integer>25</integer>
+				<integer>5</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Pulse oximeter configuration</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Record data</string>
+			<key>Key</key>
+			<string>pulseox_recording_enabled</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Peripheral</string>
+			<key>Key</key>
+			<string>pulseox_peripheral_name</string>
+			<key>DefaultValue</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Peripheral UUID</string>
+			<key>Key</key>
+			<string>pulseox_peripheral_UUID</string>
+			<key>DefaultValue</key>
+			<string></string>
+		</dict>
+	</array>
+</dict>
+</plist>

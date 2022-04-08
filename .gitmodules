@@ -1,0 +1,4 @@
+[submodule "swift-waveform_plotter"]
+	path = swift-waveform_plotter
+	url = git@github.com:maurovm/swift-waveform_plotter.git
+	branch = master

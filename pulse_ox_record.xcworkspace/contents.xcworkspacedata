@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:app/pulse_ox_recorder.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:modules/swift-async_bluetooth">
+   </FileRef>
+   <FileRef
+      location = "group:modules/swift-async_pulse_ox">
+   </FileRef>
+   <FileRef
+      location = "group:modules/swift-sensor_recording_utils">
+   </FileRef>
+   <FileRef
+      location = "group:modules/swift-waveform_plotter">
+   </FileRef>
+   <FileRef
+      location = "group:COPYING">
+   </FileRef>
+   <FileRef
+      location = "group:CREDITS">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+</Workspace>

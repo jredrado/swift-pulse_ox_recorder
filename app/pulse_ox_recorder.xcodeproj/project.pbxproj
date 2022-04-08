@@ -11,6 +11,10 @@
 		342DAC6627FC9B960068639D /* participant_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DAC6127FC9B960068639D /* participant_model.swift */; };
 		342DAC6727FC9B960068639D /* application_recording_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DAC6227FC9B960068639D /* application_recording_model.swift */; };
 		342DAC6827FC9B960068639D /* participant_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342DAC6327FC9B960068639D /* participant_view.swift */; };
+		3487C52628008B8C00AEA4F1 /* AsyncBluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 3487C52528008B8C00AEA4F1 /* AsyncBluetooth */; };
+		3487C52828008B8C00AEA4F1 /* AsyncPulseOx in Frameworks */ = {isa = PBXBuildFile; productRef = 3487C52728008B8C00AEA4F1 /* AsyncPulseOx */; };
+		3487C52A28008B8C00AEA4F1 /* SensorRecordingUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 3487C52928008B8C00AEA4F1 /* SensorRecordingUtils */; };
+		3487C52C28008B8C00AEA4F1 /* WaveformPlotter in Frameworks */ = {isa = PBXBuildFile; productRef = 3487C52B28008B8C00AEA4F1 /* WaveformPlotter */; };
 		349F9B8B27FCED1F004DA4B3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 349F9B8A27FCED1F004DA4B3 /* Settings.bundle */; };
 		34EE3E5827F6114600302011 /* main_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EE3E5727F6114600302011 /* main_app.swift */; };
 		34EE3E5C27F6114600302011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34EE3E5B27F6114600302011 /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 		342DAC6127FC9B960068639D /* participant_model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = participant_model.swift; sourceTree = "<group>"; };
 		342DAC6227FC9B960068639D /* application_recording_model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = application_recording_model.swift; sourceTree = "<group>"; };
 		342DAC6327FC9B960068639D /* participant_view.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = participant_view.swift; sourceTree = "<group>"; };
+		3487C52128008B3000AEA4F1 /* swift-sensor_recording_utils */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-sensor_recording_utils"; path = "../modules/swift-sensor_recording_utils"; sourceTree = "<group>"; };
+		3487C52228008B5B00AEA4F1 /* swift-waveform_plotter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-waveform_plotter"; path = "../modules/swift-waveform_plotter"; sourceTree = "<group>"; };
+		3487C52328008B6D00AEA4F1 /* swift-async_bluetooth */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-async_bluetooth"; path = "../modules/swift-async_bluetooth"; sourceTree = "<group>"; };
+		3487C52428008B7E00AEA4F1 /* swift-async_pulse_ox */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-async_pulse_ox"; path = "../modules/swift-async_pulse_ox"; sourceTree = "<group>"; };
 		349F9B8A27FCED1F004DA4B3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		349F9B8E27FCFFDC004DA4B3 /* pulse-ox-recorder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pulse-ox-recorder-Info.plist"; sourceTree = "<group>"; };
 		34EE3E5427F6114600302011 /* PulseOxRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PulseOxRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3487C52C28008B8C00AEA4F1 /* WaveformPlotter in Frameworks */,
+				3487C52A28008B8C00AEA4F1 /* SensorRecordingUtils in Frameworks */,
+				3487C52828008B8C00AEA4F1 /* AsyncPulseOx in Frameworks */,
+				3487C52628008B8C00AEA4F1 /* AsyncBluetooth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,9 +60,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3487C52028008B3000AEA4F1 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				3487C52128008B3000AEA4F1 /* swift-sensor_recording_utils */,
+				3487C52228008B5B00AEA4F1 /* swift-waveform_plotter */,
+				3487C52328008B6D00AEA4F1 /* swift-async_bluetooth */,
+				3487C52428008B7E00AEA4F1 /* swift-async_pulse_ox */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		34EE3E4B27F6114600302011 = {
 			isa = PBXGroup;
 			children = (
+				3487C52028008B3000AEA4F1 /* Packages */,
 				34EE3E6527F6114F00302011 /* src */,
 				34EE3E5627F6114600302011 /* project */,
 				34EE3E5527F6114600302011 /* Products */,
@@ -114,6 +138,10 @@
 			);
 			name = pulse_ox_recorder;
 			packageProductDependencies = (
+				3487C52528008B8C00AEA4F1 /* AsyncBluetooth */,
+				3487C52728008B8C00AEA4F1 /* AsyncPulseOx */,
+				3487C52928008B8C00AEA4F1 /* SensorRecordingUtils */,
+				3487C52B28008B8C00AEA4F1 /* WaveformPlotter */,
 			);
 			productName = pulse_ox_recorder;
 			productReference = 34EE3E5427F6114600302011 /* PulseOxRecorder.app */;
@@ -325,7 +353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.ac.ox.eng.cameralab.pulseox-recorder";
 				PRODUCT_NAME = PulseOxRecorder;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -362,7 +390,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2;
+				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.ac.ox.eng.cameralab.pulseox-recorder";
 				PRODUCT_NAME = PulseOxRecorder;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -393,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3487C52528008B8C00AEA4F1 /* AsyncBluetooth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AsyncBluetooth;
+		};
+		3487C52728008B8C00AEA4F1 /* AsyncPulseOx */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AsyncPulseOx;
+		};
+		3487C52928008B8C00AEA4F1 /* SensorRecordingUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SensorRecordingUtils;
+		};
+		3487C52B28008B8C00AEA4F1 /* WaveformPlotter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WaveformPlotter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34EE3E4C27F6114600302011 /* Project object */;
 }

@@ -38,12 +38,16 @@ final class Participant_model: Participant_entry_model
      * Verify all the information required is valid before start recoding
      * data
      */
-    override func is_configuration_valid() async -> Bool
+    override func is_configuration_valid() async -> Result<Void, Setup_error>
     {
-                
-        if await super.is_configuration_valid() == false
+
+        switch await super.is_configuration_valid()
         {
-            return false
+            case .success():
+                break
+                
+            case .failure(let error):
+                return .failure(error)
         }
 
         
@@ -52,19 +56,21 @@ final class Participant_model: Participant_entry_model
         
         if await AS_pulse_ox().can_access_bluetooth() == false
         {
-            setup_error = .no_bluetooth_access
-            return false
+            return .failure(.no_bluetooth_access)
         }
                     
-        if is_bluetooth_recording_supported() == false
+        switch is_bluetooth_recording_supported()
         {
-            return false
+            case .success():
+                break
+                
+            case .failure(let error):
+                return .failure(error)
         }
-
         
         cancel_system_event_subscriptions()
         
-        return true
+        return .success( () )
         
     }
     
@@ -81,40 +87,40 @@ final class Participant_model: Participant_entry_model
     /**
      * Can we record from selected configuration?
      */
-    private func is_bluetooth_recording_supported(
-        ) -> Bool
+    private func is_bluetooth_recording_supported() -> Result<Void, Setup_error>
     {
         
-        let is_supported : Bool
+        let result : Result<Void, Setup_error>
         
         switch AS_pulse_ox.is_recording_supported()
         {
             case .success():
-                is_supported = true
+                
+                result = .success( () )
                 
             case .failure(let error):
+                
                 switch error
                 {
                     case .empty_configuration:
-                        setup_error = .ble_empty_configuration
+                        result = .failure(.ble_empty_configuration)
                         
                     case .services_not_supported(let services):
-                        setup_error = .ble_services_not_supported(services)
+                        result = .failure(.ble_services_not_supported(services))
                         
                     case .characteristics_not_supported(let characteristics):
-                        setup_error = .ble_characteristics_not_supported(
+                        result = .failure(.ble_characteristics_not_supported(
                                 characteristics
-                            )
+                            ))
                         
                     case .no_characteristics_configured(let services):
-                        setup_error = .ble_no_characteristics_configured(
+                        result = .failure(.ble_no_characteristics_configured(
                                 services
-                            )
+                            ))
                 }
-                is_supported = false
         }
         
-        return is_supported
+        return result
         
     }
     

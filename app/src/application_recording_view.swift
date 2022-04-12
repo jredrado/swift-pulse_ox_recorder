@@ -21,15 +21,14 @@ struct Application_recording_view: View
     var body: some View
     {
         
-        GeometryReader
+        VStack
         {
-            geo in
             
-            if let manager = session.all_sensors.first as? AsyncPulseOx.Recording_manager
+            if let manager = session.all_pulse_oximeters.first as? AsyncPulseOx.Recording_manager
             {
                 Recording_session_view(
                         model          : session,
-                        sensor_content : Pulse_ox_view(manager)
+                        sensor_content : { Pulse_ox_view(manager) }
                     )
             }
             else

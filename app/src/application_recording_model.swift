@@ -45,7 +45,7 @@ final class Application_recording_model : Recording_session_model
         
         if let manager = pulse_ox_manager
         {
-            add_sensor(manager)
+            add_device(manager)
         }
         
     }
@@ -66,7 +66,7 @@ final class Application_recording_model : Recording_session_model
     override func add_all_configured_devices()
     {
         
-        add_sensor(
+        add_device(
             AsyncPulseOx.Recording_manager(
                 orientation       : interface_orientation,
                 preview_mode      : preview_mode,

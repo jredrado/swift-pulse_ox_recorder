@@ -80,7 +80,6 @@ struct Participant_view: View
     private func open_bluetooth_settings()
     {
         
-        model.cancel_system_event_subscriptions()
         launch_bluetooth_configuration_screen = true
         
     }

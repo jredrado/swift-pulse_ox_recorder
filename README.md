@@ -13,7 +13,7 @@ If you use this app in your projects and publish the results, please cite the fo
 
 ---
 
-PulseOxRecorder is an iOS application written in Swift. This repository only has the a minimum set of UI classes and configuraton settings (XCode files, Settings.bundle, etc) to launch the recording interface. The main functionality to connect, record and display data is provided by the following Swift Packages:
+PulseOxRecorder is an iOS application written in Swift. This repository only has the a minimum set of UI classes and configuration settings (XCode files, Settings.bundle, etc) to launch the recording interface. The main functionality to connect, record and display data is provided by the following Swift Packages:
 
 - [swift-sensor_recording_utils](https://github.com/maurovm/swift-sensor_recording_utils): A module containing shared utility methods and classes used by other modules and applications to record raw data from sensors. 
 - [swift-async_bluetooth](https://github.com/maurovm/swift-async_bluetooth): A Swift Package that replicates some of the functionality provided by Apple's CoreBluetooth module, but using Swift's latest async/await concurrency features.
@@ -125,11 +125,12 @@ When you are ready to record data. Select the "Start recording" button on the ma
 
     
 <p align="center">
-    <kbd><img src="./doc/figures/connecting.png" alt="Patient information screen" width="180" border=1 /></kbd>
+    <kbd><img src="./doc/figures/connecting.png" alt="Patient information screen" width="200" border=1 /></kbd>
     &nbsp; &nbsp; &nbsp;
-    <kbd><img src="./doc/figures/recording_portrait.png" alt="Patient information screen" width="180" border=1 /></kbd>
-    &nbsp; &nbsp; &nbsp;
-    <kbd><img src="./doc/figures/recording_landscape.png" alt="Patient information screen" width="400" border=1 /></kbd>
+    <kbd><img src="./doc/figures/recording_portrait.png" alt="Patient information screen" width="200" border=1 /></kbd>
+</p>
+<p align="center">
+    <kbd><img src="./doc/figures/recording_landscape.png" alt="Patient information screen" width="480" border=1 /></kbd>
 </p>
 
 

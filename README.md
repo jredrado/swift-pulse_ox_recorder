@@ -2,5 +2,4 @@
 
 Record data from pulse oximeters that support BLE
 
-
-![Patient information screen](./doc/figures/patient_view.png "Patient information screen")
+<img src="./doc/figures/patient_view.png" alt="Patient information screen" width="150"/>

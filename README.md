@@ -20,7 +20,7 @@ PulseOxRecorder is an iOS application written in Swift. This repository only has
 - [swift-async_pulse_ox](https://github.com/maurovm/swift-async_pulse_ox): The main module that has all the functionality to connect and record data from devices that support Bluetooth Low Energy (BLE) protocol, such as heart rate monitors and pulse oximeters. 
 - [swift-waveform_plotter](https://github.com/maurovm/swift-waveform_plotter): A library to plot physiological time-series such as the Photoplethysmogram (PPG).
 
-Example of other applications making use of the above Swift Packages are:
+Examples of other applications making use of the above Swift Packages are:
 
 - [swift-thermal_recorder](https://github.com/maurovm/swift-thermal_recorder): Record video from the thermal cameras such as the FLIR One.
 - [swift-waveform_plotter_example](https://github.com/maurovm/swift-waveform_plotter_example): Example application to showcase the features available in the "WaveformPlotter" Swift library.

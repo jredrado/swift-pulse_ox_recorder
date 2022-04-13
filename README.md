@@ -50,8 +50,12 @@ Known pulse oximeters that support the above standards are:
 
 When you launch the application, you are presented with the following screen:
 
-<img src="./doc/figures/patient_view.png" alt="Patient information screen" width="200" border=1 />
 
+<p align="center">
+    <kbd><img src="./doc/figures/patient_view.png" alt="Patient information screen" width="200" border=1 /></kbd>
+</p
+
+    
 In this screen you can enter the unique identifier for the recording session and configure the application. It is important that you DO NOT include spaces for the recording identifier.
 
 The main entry screen also displays the current battery percentage and thermal state of the phone. Possible values for the thermal state follow the ones described by "[ProcessInfo.ThermalState](https://developer.apple.com/documentation/foundation/processinfo/thermalstate)" in Swift's Foundation framework:
@@ -68,8 +72,12 @@ You can configure the minim required levels before launching the main recording 
 
 When you press the "Application settings" buttons in the main entry form screen, you are presented with the following screen:
 
-<img src="./doc/figures/app_settings.png" alt="Patient information screen" width="200" border=1 />
+    
+<p align="center">
+    <img src="./doc/figures/app_settings.png" alt="Patient information screen" width="200" border=1 />
+</p>
 
+    
 Here, you can choose the main configuration settings for the entire application. As the application records data from devices using BLE, make sure you enable "Bluetooth" access for the application.
 
 Global settings:
@@ -89,8 +97,12 @@ Pulse oximeter configuration
 
 After you press on the "Configure bluetooth" button on the main screen, you are presented with the following screen:
 
-<img src="./doc/figures/configure_ble.png" alt="Patient information screen" width="200" border=1 />
-
+    
+<p align="center">
+    <img src="./doc/figures/configure_ble.png" alt="Patient information screen" width="200" border=1 />
+</p>
+    
+    
 The main purpose of this screen is select the BLE Characteristics to record data from. The application will display the list of BLE peripherals nearby. If the list of devices is too long (depending how many Bluetooth peripherals are around you), you can filter it by name using the search box. 
 
 When you select the desired peripheral, the application will attempt to connect to it. It will then list the services the device advertises. Select the desired service and the list of BLE Characteristics will be displayed. You can then choose the Characteristics you want to record data from by selected the check box at the left. The Check box will display a green check mark for the selected Characteristics.
@@ -99,28 +111,36 @@ After you finish selecting all the BLE Characteristics you want to record data f
 
 You also preview the data sent by the BLE peripheral for a given Characteristic. When you tap on the name of the Characteristic, the colour of the background will change to blue and a button with the label "Detail" will be displayed at the top of the list. When you press on the "Detail" button, a new screen will appear, from which you can choose the "Start notifications" button to receive data from the BLE peripheral. Some examples are shown in the following figure:
 
-<p float="center">
-    <img src="./doc/figures/ble_nco_detail.png" alt="Patient information screen" width="200" border=1 />
+    
+<p align="center">
+    <kbd><img src="./doc/figures/ble_nco_detail.png" alt="Patient information screen" width="200" border=1 /></kbd>
     &nbsp; &nbsp; &nbsp;
-    <img src="./doc/figures/ble_nppg_detail_landscape.png" alt="Patient information screen" width="400" border=1 />
+    <kbd><img src="./doc/figures/ble_nppg_detail_landscape.png" alt="Patient information screen" width="600" border=1 /></kbd>
 </p>
 
+    
 ## Recording screen
 
 When you are ready to record data. Select the "Start recording" button on the main screen. You will be presented with the main recording interface. You can now press on the "Start" button in green colour at the top right corner of the screen. The application will cycle through the stages of "Connecting...", "Starting..." and finally will display the values sent by the BLE peripheral. The following figures show some examples:
 
-<p float="center">
-    <img src="./doc/figures/connecting.png" alt="Patient information screen" width="200" border=1 />
+    
+<p align="center">
+    <kbd><img src="./doc/figures/connecting.png" alt="Patient information screen" width="180" border=1 /></kbd>
     &nbsp; &nbsp; &nbsp;
-    <img src="./doc/figures/recording_portrait.png" alt="Patient information screen" width="200" border=1 />
+    <kbd><img src="./doc/figures/recording_portrait.png" alt="Patient information screen" width="180" border=1 /></kbd>
+    &nbsp; &nbsp; &nbsp;
+    <kbd><img src="./doc/figures/recording_landscape.png" alt="Patient information screen" width="400" border=1 /></kbd>
 </p>
-<img src="./doc/figures/recording_landscape.png" alt="Patient information screen" width="430" border=1 />
+
 
 > Note that the application supports both portrait and landscape orientation.
 
+
 To stop the recording process, just press the "Stop" button in red colour. The application will finish and you will be sent back to the main entry form screen.
 
+
 ## Sample output data
+
 
 The application record data "locally" in your phone, in a folder with the following format:
 
@@ -134,11 +154,18 @@ where:
 - DEVICE_NAME: The unique name of the configured BLE device.
 
 
-You can use Apple's Files app to browse the recording folder use by the app. The data is written in plain text files, one file per Bluetooth Characteristic using comma separated values (csv) format. The figures below show examples of some of the output:
+You can use Apple's Files app to browse the recording folder use by the app. The data is written in plain text files, one file per Bluetooth Characteristic using comma separated values (csv) format. The figure below shows an example of the output for the Nonin PPG Characteristic:
 
-
-<p float="center">
-    <img src="./doc/figures/ble_nppg_data.png" alt="Patient information screen" width="150" border=1 />
-    &nbsp; &nbsp; &nbsp;
-    <img src="./doc/figures/ble_nco_data.png" alt="Patient information screen" width="400" border=1 />
+    
+<p align="center">
+    <img src="./doc/figures/ble_nppg_data.png" alt="Patient information screen" width="300" border=1 />
 </p>
+
+
+The figure below shows an example of the output for the Nonin Continuous Oximetry Characteristic:
+
+
+<p align="center">
+    <img src="./doc/figures/ble_nco_data.png" alt="Patient information screen" width="600" border=1 />
+</p>
+

@@ -20,6 +20,9 @@
       location = "group:COPYING">
    </FileRef>
    <FileRef
+      location = "group:CONTRIBUTING.md">
+   </FileRef>
+   <FileRef
       location = "group:CREDITS">
    </FileRef>
    <FileRef

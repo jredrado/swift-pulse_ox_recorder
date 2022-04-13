@@ -161,6 +161,8 @@ You can use Apple's Files app to browse the recording folder use by the app. The
     <img src="./doc/figures/ble_nppg_data.png" alt="Patient information screen" width="300" border=1 />
 </p>
 
+> Note that all timestamps are recorded as "unix epoch" (time elapsed since January 1, 1970 - midnight UTC/GMT) in **nanoseconds** 
+
 
 The figure below shows an example of the output for the Nonin Continuous Oximetry Characteristic:
 

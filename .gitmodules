@@ -2,15 +2,19 @@
 	path = modules/swift-sensor_recording_utils
 	url = git@github.com:maurovm/swift-sensor_recording_utils.git
 	branch = master
+	update = merge
 [submodule "modules/swift-waveform_plotter"]
 	path = modules/swift-waveform_plotter
 	url = git@github.com:maurovm/swift-waveform_plotter.git
 	branch = master
+	update = merge
 [submodule "modules/swift-async_bluetooth"]
 	path = modules/swift-async_bluetooth
 	url = git@github.com:maurovm/swift-async_bluetooth.git
 	branch = master
+	update = merge
 [submodule "modules/swift-async_pulse_ox"]
 	path = modules/swift-async_pulse_ox
 	url = git@github.com:maurovm/swift-async_pulse_ox.git
 	branch = master
+	update = merge
